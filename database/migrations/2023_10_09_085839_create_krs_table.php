@@ -11,16 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('schedules', function (Blueprint $table) {
+        Schema::create('krs', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('subject_id')->constrained('subjects');
-            $table->string('hari');
-            $table->string('jam_mulai');
-            $table->string('jam_selesai');
-            $table->string('ruangan');
-            $table->string('kode_absensi')->nullable();
+            $table->foreignId('mahasiswa_id')->constrained('users');
+            $table->foreignId('matakuliah_id')->constrained('subjects');
             $table->string('tahun_akademik');
             $table->string('semester');
+            $table->string('status');
             $table->string('created_by');
             $table->string('updated_by');
             $table->string('deleted_by')->nullable();
@@ -33,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('schedules');
+        Schema::dropIfExists('krs');
     }
 };

@@ -16,9 +16,15 @@ class SubjectFactory extends Factory
      */
     public function definition(): array
     {
+       
         return [
-            'title' => fake()->word(),
-            'lecturer_id' => 3,
+            'title' => $this->faker->word,
+            'lecturer_id' => \App\Models\User::factory(),
+            'semester' => $this->faker->randomDigit(1),
+            'tahun_akademik' => $this->faker->randomDigit(2),
+            'sks' => $this->faker->randomDigit(1),
+            'kode_matakuliah' => $this->faker->word,
+            'deskripsi' => $this->faker->word,
         ];
     }
 }

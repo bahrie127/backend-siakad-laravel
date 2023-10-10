@@ -25,18 +25,20 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('user', UserController::class);
 });
 
-// Route::get('/login', function () {
-//     return view('pages.auth.auth-login');
-// })->name('login');
+//resource subject with middleware auth
+Route::middleware(['auth'])->group(function () {
+    Route::resource('subject', \App\Http\Controllers\SubjectController::class);
+});
 
-// Route::get('/register', function () {
-//     return view('pages.auth.auth-register');
-// })->name('register');
+//resource schedule with middleware auth
+Route::middleware(['auth'])->group(function () {
+    Route::resource('schedule', \App\Http\Controllers\ScheduleController::class);
+});
 
-// Route::get('/forgot', function () {
-//     return view('pages.auth.auth-forgot-password');
-// })->name('forgot');
+//get showqrcode
+Route::get('showqrcode', [\App\Http\Controllers\QrCodeController::class, 'showQrcode'])->name('showqrcode');
+//get schedule createqrcode
+Route::get('createqrcode', [\App\Http\Controllers\ScheduleController::class, 'createQrcode'])->name('createqrcode');
 
-// Route::get('/reset-password', function () {
-//     return view('pages.auth.auth-reset-password');
-// })->name('reset-password');
+//post schedule generateqrcode
+Route::post('generateqrcode', [\App\Http\Controllers\ScheduleController::class, 'generateQrcode'])->name('generateqrcode');
