@@ -2,17 +2,18 @@
 
 namespace Database\Seeders;
 
-use App\Models\Schedule;
+use App\Models\Khs;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class ScheduleSeeder extends Seeder
+class KhsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        Schedule::factory(50)->create();
+        // Khs::factory(50)->create();
+        Khs::factory()->count(150)->create();
     }
 }

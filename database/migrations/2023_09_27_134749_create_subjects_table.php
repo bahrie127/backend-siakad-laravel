@@ -15,6 +15,16 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->bigInteger('lecturer_id')->unsigned();
+            //semester
+            $table->string('semester');
+            //tahun akademik
+            $table->string('academic_year');
+            //sks
+            $table->integer('sks');
+            //kode matakuliah
+            $table->string('code');
+            //deskripsi
+            $table->text('description');
             $table->timestamps();
 
             $table->foreign('lecturer_id', 'lecturerid_foreign')->references('id')->on('users');

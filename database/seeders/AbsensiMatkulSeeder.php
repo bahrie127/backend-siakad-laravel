@@ -2,17 +2,17 @@
 
 namespace Database\Seeders;
 
-use App\Models\Schedule;
+use App\Models\AbsensiMatkul;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class ScheduleSeeder extends Seeder
+class AbsensiMatkulSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        Schedule::factory(50)->create();
+        AbsensiMatkul::factory(150)->create();
     }
 }
