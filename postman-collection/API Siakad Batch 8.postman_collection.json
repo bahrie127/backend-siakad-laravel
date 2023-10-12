@@ -12,21 +12,10 @@
 			"protocolProfileBehavior": {
 				"disabledSystemHeaders": {
 					"accept": true
-				},
-				"disableBodyPruning": true
+				}
 			},
 			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "1|uTBVsWRjZbbTDuGO2V99sXqgG5AaTIFBPaoAQmZr9225f8c8",
-							"type": "string"
-						}
-					]
-				},
-				"method": "GET",
+				"method": "POST",
 				"header": [
 					{
 						"key": "Accept",
@@ -44,14 +33,14 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8000/api/khs",
+					"raw": "localhost:8000/api/login",
 					"host": [
 						"localhost"
 					],
 					"port": "8000",
 					"path": [
 						"api",
-						"khs"
+						"login"
 					]
 				}
 			},
@@ -66,7 +55,14 @@
 			},
 			"request": {
 				"auth": {
-					"type": "noauth"
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|aCn1wvebUW8wx6DNMkr4baPEsxBElMg8usXc9HKIc331a245",
+							"type": "string"
+						}
+					]
 				},
 				"method": "POST",
 				"header": [
@@ -108,7 +104,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "2|3tPt0tqvlyXQUJy8vWmJJF3OFyEoyu5OZK02yttSd613a0c9",
+							"value": "1|uTBVsWRjZbbTDuGO2V99sXqgG5AaTIFBPaoAQmZr9225f8c8",
 							"type": "string"
 						}
 					]
@@ -189,7 +185,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "1|uTBVsWRjZbbTDuGO2V99sXqgG5AaTIFBPaoAQmZr9225f8c8",
+							"value": "5|S9x8xCunRHK8j6snFUCctX9v1NfpFLiHT5admC1E43e84bd9",
 							"type": "string"
 						}
 					]
