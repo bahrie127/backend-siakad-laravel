@@ -28,7 +28,7 @@ class ScheduleFactory extends Factory
         //     $table->string('updated_by');
         return [
             'subject_id' => \App\Models\Subject::factory(),
-            'student_id' => \App\Models\User::factory(),
+            // 'student_id' => \App\Models\User::factory(),
             'hari' => $this->faker->randomElement(['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu']),
             'jam_mulai' => $this->faker->randomElement(['07:00', '08:00', '09:00', '10:00', '11:00', '12:00']),
             'jam_selesai' => $this->faker->randomElement(['09:00', '10:00', '11:00', '12:00', '13:00', '14:00']),

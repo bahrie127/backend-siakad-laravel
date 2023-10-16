@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('subject_id')->constrained('subjects');
             //student
-            $table->foreignId('student_id')->constrained('users');
+           // $table->foreignId('student_id')->constrained('users');
             $table->string('hari');
             $table->string('jam_mulai');
             $table->string('jam_selesai');

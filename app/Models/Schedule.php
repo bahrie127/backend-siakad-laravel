@@ -16,7 +16,7 @@ class Schedule extends Model
     // $table->string('tahun_akademik');
     protected $fillable = [
         'subject_id',
-        'student_id',
+        // 'student_id',
         'hari',
         'jam_mulai',
         'jam_selesai',
