@@ -22,7 +22,15 @@
 
 
                 <div class="visible-print text-center">
-                    {!! QrCode::size(200)->generate($code) !!}
+                    @php
+                        $options = new \chillerlan\QRCode\QROptions([
+                            'outputType' => \chillerlan\QRCode\QRCode::OUTPUT_MARKUP_SVG,
+                            'eccLevel' => \chillerlan\QRCode\Common\EccLevel::L,
+                            'svgViewBoxSize' => 200,
+                        ]);
+                        $qrcode = (new \chillerlan\QRCode\QRCode($options))->render($code);
+                    @endphp
+                    <img src="{{ $qrcode }}" alt="QR Code" width="200" height="200">
                     <p>Scan me to absen</p>
                 </div>
 
