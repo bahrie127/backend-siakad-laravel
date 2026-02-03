@@ -17,3 +17,10 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+
+# macOS
+.DS_Store
+*/.DS_Store
+
+# node_modules in public
+public/**/node_modules
